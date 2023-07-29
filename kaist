@@ -3,7 +3,26 @@ jetson기본 설정을 하기 위해 조립을 했다.
 다음으로 컴퓨터 코딩을 계속하면 jetson이 과열되기 떄문에 fan을 달았다.
 그리고 camara를 달았다.
 먼저,fan코딩을 했는데 너무 어려웠다.
-fan 코딩은 앞서 배운 list,print등 의 명령어를 사용하여 코딩을 마쳤다.
-그 다음으로 camara를 코딩 헸다.
-camcara 코딩은 아까와 마찬가지로 list,print,등의 명령어를 사용하고 완료하니 우리의 모습이 컴퓨터에 나왔다.
+fan 코딩은 sudo -H pip3 install -U jetson-statsjetson-stats,
+pip3 list| grep jetson
+명령어를 사용했다.
+그 다음으로 camara를 코딩 헸다.camcara 코딩은    
+ls /dev/video0 -ldli@dli-desktop:~$  ls /dev/video0 -l,
+git clone https://github.com/jetsonhacks/USB-Camera.git
+ls
+cd USB-Camera
+python3 usb-camera-gst.py 
+nvgstcapture-1.0 --mode=1 --camsrc=0 --cap-dev-node=0 --automate --capture-auto 
+nvgstcapture-1.0 --mode=2 --camsrc=0 --cap-dev-node=0
+이렇게 입력 했다.
 jetson의 fan,cacmara를 완성하니 컴퓨터에 연결해서 또 코딩을 했다.
+ echo "sudo docker run --runtime nvidia -it --rm --network host \
+    --volume ~/nvdli-data:/nvdli-nano/data \
+    --volume /tmp/argus_socket:/tmp/argus_socket \
+    --device /dev/video0 \
+    nvcr.io/nvidia/dli/dli-nano-ai:v2.0.2-r32.7.1kr" > docker_dli_run.sh
+chmod +x docker_dli_run.sh
+ls
+docker_dli_run.sh
+이렇게 코딩을 했다.
+많이 어려웠지만 배우는 맚이 있어 유익한 시간이 았다.
