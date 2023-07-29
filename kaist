@@ -1,4 +1,9 @@
-가나다라마바사아자차카타파하
-abcdefghijklmnopqrstuvwxyz
-아야어여오요우유으이
-ㅃㅉㄸㄲㅆㅒㅖ
+오늘은 jetson을 사용해 보았다.
+jetson기본 설정을 하기 위해 조립을 했다.
+다음으로 컴퓨터 코딩을 계속하면 jetson이 과열되기 떄문에 fan을 달았다.
+그리고 camara를 달았다.
+먼저,fan코딩을 했는데 너무 어려웠다.
+fan 코딩은 앞서 배운 list,print등 의 명령어를 사용하여 코딩을 마쳤다.
+그 다음으로 camara를 코딩 헸다.
+camcara 코딩은 아까와 마찬가지로 list,print,등의 명령어를 사용하고 완료하니 우리의 모습이 컴퓨터에 나왔다.
+jetson의 fan,cacmara를 완성하니 컴퓨터에 연결해서 또 코딩을 했다.
